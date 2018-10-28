@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21C0FC732187A0FC00204F8D /* multi_path_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC6F2187A0FB00204F8D /* multi_path_sploit.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
+		21C0FC742187A0FC00204F8D /* empty_list_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC702187A0FB00204F8D /* empty_list_sploit.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
+		21C0FC7B2187A12000204F8D /* early_kalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC752187A11F00204F8D /* early_kalloc.c */; };
+		21C0FC7C2187A12000204F8D /* find_port.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC762187A11F00204F8D /* find_port.c */; };
+		21C0FC7D2187A12000204F8D /* async_wake.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC782187A11F00204F8D /* async_wake.c */; };
+		21FF3DA42185AB0800B1AE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DA32185AB0800B1AE49 /* AppDelegate.m */; };
+		21FF3DA72185AB0800B1AE49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DA62185AB0800B1AE49 /* ViewController.m */; settings = {COMPILER_FLAGS = "-Wno-unused-variable -Wno-unused-function"; }; };
+		21FF3DAA2185AB0800B1AE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3DA82185AB0800B1AE49 /* Main.storyboard */; };
+		21FF3DAC2185AB0A00B1AE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3DAB2185AB0A00B1AE49 /* Assets.xcassets */; };
+		21FF3DAF2185AB0A00B1AE49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3DAD2185AB0A00B1AE49 /* LaunchScreen.storyboard */; };
+		21FF3DB22185AB0A00B1AE49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DB12185AB0A00B1AE49 /* main.m */; };
+		21FF3DD72185ABD700B1AE49 /* qilin.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF3DD52185ABD600B1AE49 /* qilin.o */; };
+		21FF3DE02185B28800B1AE49 /* kmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DDD2185B28800B1AE49 /* kmem.c */; };
+		21FF3DE12185B28800B1AE49 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DDE2185B28800B1AE49 /* offsets.m */; };
+		21FF3DE52185BA9A00B1AE49 /* dropbear.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3DE42185BA9A00B1AE49 /* dropbear.plist */; };
+		21FF3DE82185BE1600B1AE49 /* patchfinder64.c in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DE62185BE1500B1AE49 /* patchfinder64.c */; settings = {COMPILER_FLAGS = "-Wno-unused-variable -Wno-unused-function"; }; };
+		21FF3DEB2185BF9600B1AE49 /* kutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DEA2185BF9600B1AE49 /* kutils.c */; };
+		21FF3DEE2185C0E500B1AE49 /* kexecute.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DEC2185C0E500B1AE49 /* kexecute.m */; };
+		21FF3DF92185EE5400B1AE49 /* binpack64-256.tar.lzma in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3DF82185EE5400B1AE49 /* binpack64-256.tar.lzma */; };
+		21FF3DFD2185F02F00B1AE49 /* Filza.tar.lzma in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3DFC2185F02F00B1AE49 /* Filza.tar.lzma */; };
+		21FF3E002185F06900B1AE49 /* untar.c in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DFF2185F06800B1AE49 /* untar.c */; };
+		21FF3E032185F11300B1AE49 /* tar.tar in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3E012185F11300B1AE49 /* tar.tar */; };
+		21FF3E042185F11300B1AE49 /* lzma.tar in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3E022185F11300B1AE49 /* lzma.tar */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21FF3DB82185AB0A00B1AE49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21FF3D972185AB0800B1AE49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21FF3D9E2185AB0800B1AE49;
+			remoteInfo = Osiris;
+		};
+		21FF3DC32185AB0A00B1AE49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21FF3D972185AB0800B1AE49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21FF3D9E2185AB0800B1AE49;
+			remoteInfo = Osiris;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21C0FC6F2187A0FB00204F8D /* multi_path_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multi_path_sploit.c; sourceTree = "<group>"; };
+		21C0FC702187A0FB00204F8D /* empty_list_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = empty_list_sploit.c; sourceTree = "<group>"; };
+		21C0FC712187A0FC00204F8D /* empty_list_sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = empty_list_sploit.h; sourceTree = "<group>"; };
+		21C0FC722187A0FC00204F8D /* multi_path_sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multi_path_sploit.h; sourceTree = "<group>"; };
+		21C0FC752187A11F00204F8D /* early_kalloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = early_kalloc.c; sourceTree = "<group>"; };
+		21C0FC762187A11F00204F8D /* find_port.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = find_port.c; sourceTree = "<group>"; };
+		21C0FC772187A11F00204F8D /* find_port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = find_port.h; sourceTree = "<group>"; };
+		21C0FC782187A11F00204F8D /* async_wake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = async_wake.c; sourceTree = "<group>"; };
+		21C0FC792187A12000204F8D /* early_kalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = early_kalloc.h; sourceTree = "<group>"; };
+		21C0FC7A2187A12000204F8D /* async_wake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = async_wake.h; sourceTree = "<group>"; };
+		21C0FC7E2187A20B00204F8D /* multi_path.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = multi_path.entitlements; sourceTree = "<group>"; };
+		21FF3D9F2185AB0800B1AE49 /* Osiris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Osiris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FF3DA22185AB0800B1AE49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21FF3DA32185AB0800B1AE49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21FF3DA52185AB0800B1AE49 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		21FF3DA62185AB0800B1AE49 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		21FF3DA92185AB0800B1AE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21FF3DAB2185AB0A00B1AE49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21FF3DAE2185AB0A00B1AE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21FF3DB02185AB0A00B1AE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21FF3DB12185AB0A00B1AE49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21FF3DB72185AB0A00B1AE49 /* OsirisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsirisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FF3DC22185AB0A00B1AE49 /* OsirisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OsirisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FF3DD42185ABD600B1AE49 /* QiLin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiLin.h; sourceTree = "<group>"; };
+		21FF3DD52185ABD600B1AE49 /* qilin.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = qilin.o; sourceTree = "<group>"; };
+		21FF3DD92185B28700B1AE49 /* kmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kmem.h; sourceTree = "<group>"; };
+		21FF3DDC2185B28700B1AE49 /* offsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = offsets.h; sourceTree = "<group>"; };
+		21FF3DDD2185B28800B1AE49 /* kmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kmem.c; sourceTree = "<group>"; };
+		21FF3DDE2185B28800B1AE49 /* offsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = offsets.m; sourceTree = "<group>"; };
+		21FF3DE42185BA9A00B1AE49 /* dropbear.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = dropbear.plist; sourceTree = "<group>"; };
+		21FF3DE62185BE1500B1AE49 /* patchfinder64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = patchfinder64.c; sourceTree = "<group>"; };
+		21FF3DE72185BE1600B1AE49 /* patchfinder64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = patchfinder64.h; sourceTree = "<group>"; };
+		21FF3DE92185BF9600B1AE49 /* kutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kutils.h; sourceTree = "<group>"; };
+		21FF3DEA2185BF9600B1AE49 /* kutils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kutils.c; sourceTree = "<group>"; };
+		21FF3DEC2185C0E500B1AE49 /* kexecute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kexecute.m; sourceTree = "<group>"; };
+		21FF3DED2185C0E500B1AE49 /* kexecute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kexecute.h; sourceTree = "<group>"; };
+		21FF3DEF2185C0F800B1AE49 /* iokit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iokit.h; sourceTree = "<group>"; };
+		21FF3DF82185EE5400B1AE49 /* binpack64-256.tar.lzma */ = {isa = PBXFileReference; lastKnownFileType = file; path = "binpack64-256.tar.lzma"; sourceTree = "<group>"; };
+		21FF3DFC2185F02F00B1AE49 /* Filza.tar.lzma */ = {isa = PBXFileReference; lastKnownFileType = file; path = Filza.tar.lzma; sourceTree = "<group>"; };
+		21FF3DFE2185F06800B1AE49 /* untar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = untar.h; sourceTree = "<group>"; };
+		21FF3DFF2185F06800B1AE49 /* untar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = untar.c; sourceTree = "<group>"; };
+		21FF3E012185F11300B1AE49 /* tar.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = tar.tar; sourceTree = "<group>"; };
+		21FF3E022185F11300B1AE49 /* lzma.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = lzma.tar; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21FF3D9C2185AB0800B1AE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21FF3DD72185ABD700B1AE49 /* qilin.o in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FF3DB42185AB0A00B1AE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FF3DBF2185AB0A00B1AE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21FF3D962185AB0800B1AE49 = {
+			isa = PBXGroup;
+			children = (
+				21FF3DA12185AB0800B1AE49 /* Osiris */,
+				21FF3DA02185AB0800B1AE49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21FF3DA02185AB0800B1AE49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21FF3D9F2185AB0800B1AE49 /* Osiris.app */,
+				21FF3DB72185AB0A00B1AE49 /* OsirisTests.xctest */,
+				21FF3DC22185AB0A00B1AE49 /* OsirisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21FF3DA12185AB0800B1AE49 /* Osiris */ = {
+			isa = PBXGroup;
+			children = (
+				21C0FC7E2187A20B00204F8D /* multi_path.entitlements */,
+				21FF3E022185F11300B1AE49 /* lzma.tar */,
+				21FF3E012185F11300B1AE49 /* tar.tar */,
+				21FF3DFC2185F02F00B1AE49 /* Filza.tar.lzma */,
+				21FF3DF82185EE5400B1AE49 /* binpack64-256.tar.lzma */,
+				21FF3DFF2185F06800B1AE49 /* untar.c */,
+				21FF3DFE2185F06800B1AE49 /* untar.h */,
+				21FF3DED2185C0E500B1AE49 /* kexecute.h */,
+				21FF3DEC2185C0E500B1AE49 /* kexecute.m */,
+				21FF3DEF2185C0F800B1AE49 /* iokit.h */,
+				21FF3DEA2185BF9600B1AE49 /* kutils.c */,
+				21FF3DE92185BF9600B1AE49 /* kutils.h */,
+				21FF3DE62185BE1500B1AE49 /* patchfinder64.c */,
+				21FF3DE72185BE1600B1AE49 /* patchfinder64.h */,
+				21FF3DE42185BA9A00B1AE49 /* dropbear.plist */,
+				21FF3DDD2185B28800B1AE49 /* kmem.c */,
+				21FF3DD92185B28700B1AE49 /* kmem.h */,
+				21FF3DDC2185B28700B1AE49 /* offsets.h */,
+				21FF3DDE2185B28800B1AE49 /* offsets.m */,
+				21C0FC782187A11F00204F8D /* async_wake.c */,
+				21C0FC7A2187A12000204F8D /* async_wake.h */,
+				21C0FC752187A11F00204F8D /* early_kalloc.c */,
+				21C0FC792187A12000204F8D /* early_kalloc.h */,
+				21C0FC762187A11F00204F8D /* find_port.c */,
+				21C0FC772187A11F00204F8D /* find_port.h */,
+				21C0FC702187A0FB00204F8D /* empty_list_sploit.c */,
+				21C0FC712187A0FC00204F8D /* empty_list_sploit.h */,
+				21C0FC6F2187A0FB00204F8D /* multi_path_sploit.c */,
+				21C0FC722187A0FC00204F8D /* multi_path_sploit.h */,
+				21FF3DD42185ABD600B1AE49 /* QiLin.h */,
+				21FF3DD52185ABD600B1AE49 /* qilin.o */,
+				21FF3DA22185AB0800B1AE49 /* AppDelegate.h */,
+				21FF3DA32185AB0800B1AE49 /* AppDelegate.m */,
+				21FF3DA52185AB0800B1AE49 /* ViewController.h */,
+				21FF3DA62185AB0800B1AE49 /* ViewController.m */,
+				21FF3DA82185AB0800B1AE49 /* Main.storyboard */,
+				21FF3DAB2185AB0A00B1AE49 /* Assets.xcassets */,
+				21FF3DAD2185AB0A00B1AE49 /* LaunchScreen.storyboard */,
+				21FF3DB02185AB0A00B1AE49 /* Info.plist */,
+				21FF3DB12185AB0A00B1AE49 /* main.m */,
+			);
+			path = Osiris;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21FF3D9E2185AB0800B1AE49 /* Osiris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21FF3DCB2185AB0A00B1AE49 /* Build configuration list for PBXNativeTarget "Osiris" */;
+			buildPhases = (
+				21FF3D9B2185AB0800B1AE49 /* Sources */,
+				21FF3D9C2185AB0800B1AE49 /* Frameworks */,
+				21FF3D9D2185AB0800B1AE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Osiris;
+			productName = Osiris;
+			productReference = 21FF3D9F2185AB0800B1AE49 /* Osiris.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21FF3DB62185AB0A00B1AE49 /* OsirisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21FF3DCE2185AB0A00B1AE49 /* Build configuration list for PBXNativeTarget "OsirisTests" */;
+			buildPhases = (
+				21FF3DB32185AB0A00B1AE49 /* Sources */,
+				21FF3DB42185AB0A00B1AE49 /* Frameworks */,
+				21FF3DB52185AB0A00B1AE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21FF3DB92185AB0A00B1AE49 /* PBXTargetDependency */,
+			);
+			name = OsirisTests;
+			productName = OsirisTests;
+			productReference = 21FF3DB72185AB0A00B1AE49 /* OsirisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		21FF3DC12185AB0A00B1AE49 /* OsirisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21FF3DD12185AB0A00B1AE49 /* Build configuration list for PBXNativeTarget "OsirisUITests" */;
+			buildPhases = (
+				21FF3DBE2185AB0A00B1AE49 /* Sources */,
+				21FF3DBF2185AB0A00B1AE49 /* Frameworks */,
+				21FF3DC02185AB0A00B1AE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21FF3DC42185AB0A00B1AE49 /* PBXTargetDependency */,
+			);
+			name = OsirisUITests;
+			productName = OsirisUITests;
+			productReference = 21FF3DC22185AB0A00B1AE49 /* OsirisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21FF3D972185AB0800B1AE49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Pwn20wnd;
+				TargetAttributes = {
+					21FF3D9E2185AB0800B1AE49 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					21FF3DB62185AB0A00B1AE49 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 21FF3D9E2185AB0800B1AE49;
+					};
+					21FF3DC12185AB0A00B1AE49 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 21FF3D9E2185AB0800B1AE49;
+					};
+				};
+			};
+			buildConfigurationList = 21FF3D9A2185AB0800B1AE49 /* Build configuration list for PBXProject "Osiris" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21FF3D962185AB0800B1AE49;
+			productRefGroup = 21FF3DA02185AB0800B1AE49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21FF3D9E2185AB0800B1AE49 /* Osiris */,
+				21FF3DB62185AB0A00B1AE49 /* OsirisTests */,
+				21FF3DC12185AB0A00B1AE49 /* OsirisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21FF3D9D2185AB0800B1AE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21FF3E032185F11300B1AE49 /* tar.tar in Resources */,
+				21FF3E042185F11300B1AE49 /* lzma.tar in Resources */,
+				21FF3DAF2185AB0A00B1AE49 /* LaunchScreen.storyboard in Resources */,
+				21FF3DF92185EE5400B1AE49 /* binpack64-256.tar.lzma in Resources */,
+				21FF3DAC2185AB0A00B1AE49 /* Assets.xcassets in Resources */,
+				21FF3DFD2185F02F00B1AE49 /* Filza.tar.lzma in Resources */,
+				21FF3DE52185BA9A00B1AE49 /* dropbear.plist in Resources */,
+				21FF3DAA2185AB0800B1AE49 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FF3DB52185AB0A00B1AE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FF3DC02185AB0A00B1AE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21FF3D9B2185AB0800B1AE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21FF3DEE2185C0E500B1AE49 /* kexecute.m in Sources */,
+				21FF3DE02185B28800B1AE49 /* kmem.c in Sources */,
+				21FF3DE82185BE1600B1AE49 /* patchfinder64.c in Sources */,
+				21FF3DA72185AB0800B1AE49 /* ViewController.m in Sources */,
+				21C0FC742187A0FC00204F8D /* empty_list_sploit.c in Sources */,
+				21C0FC7B2187A12000204F8D /* early_kalloc.c in Sources */,
+				21C0FC7C2187A12000204F8D /* find_port.c in Sources */,
+				21FF3DB22185AB0A00B1AE49 /* main.m in Sources */,
+				21C0FC7D2187A12000204F8D /* async_wake.c in Sources */,
+				21FF3DEB2185BF9600B1AE49 /* kutils.c in Sources */,
+				21FF3DE12185B28800B1AE49 /* offsets.m in Sources */,
+				21FF3E002185F06900B1AE49 /* untar.c in Sources */,
+				21FF3DA42185AB0800B1AE49 /* AppDelegate.m in Sources */,
+				21C0FC732187A0FC00204F8D /* multi_path_sploit.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FF3DB32185AB0A00B1AE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FF3DBE2185AB0A00B1AE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21FF3DB92185AB0A00B1AE49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21FF3D9E2185AB0800B1AE49 /* Osiris */;
+			targetProxy = 21FF3DB82185AB0A00B1AE49 /* PBXContainerItemProxy */;
+		};
+		21FF3DC42185AB0A00B1AE49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21FF3D9E2185AB0800B1AE49 /* Osiris */;
+			targetProxy = 21FF3DC32185AB0A00B1AE49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21FF3DA82185AB0800B1AE49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21FF3DA92185AB0800B1AE49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21FF3DAD2185AB0A00B1AE49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21FF3DAE2185AB0A00B1AE49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21FF3DC92185AB0A00B1AE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		21FF3DCA2185AB0A00B1AE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21FF3DCC2185AB0A00B1AE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Osiris/multi_path.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Osiris/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					IOKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = science.xnu.Osiris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21FF3DCD2185AB0A00B1AE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Osiris/multi_path.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Osiris/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					IOKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = science.xnu.Osiris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		21FF3DCF2185AB0A00B1AE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OsirisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = science.xnu.OsirisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Osiris.app/Osiris";
+			};
+			name = Debug;
+		};
+		21FF3DD02185AB0A00B1AE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OsirisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = science.xnu.OsirisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Osiris.app/Osiris";
+			};
+			name = Release;
+		};
+		21FF3DD22185AB0A00B1AE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OsirisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = science.xnu.OsirisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Osiris;
+			};
+			name = Debug;
+		};
+		21FF3DD32185AB0A00B1AE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OsirisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = science.xnu.OsirisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Osiris;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21FF3D9A2185AB0800B1AE49 /* Build configuration list for PBXProject "Osiris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21FF3DC92185AB0A00B1AE49 /* Debug */,
+				21FF3DCA2185AB0A00B1AE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21FF3DCB2185AB0A00B1AE49 /* Build configuration list for PBXNativeTarget "Osiris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21FF3DCC2185AB0A00B1AE49 /* Debug */,
+				21FF3DCD2185AB0A00B1AE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21FF3DCE2185AB0A00B1AE49 /* Build configuration list for PBXNativeTarget "OsirisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21FF3DCF2185AB0A00B1AE49 /* Debug */,
+				21FF3DD02185AB0A00B1AE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21FF3DD12185AB0A00B1AE49 /* Build configuration list for PBXNativeTarget "OsirisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21FF3DD22185AB0A00B1AE49 /* Debug */,
+				21FF3DD32185AB0A00B1AE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21FF3D972185AB0800B1AE49 /* Project object */;
+}

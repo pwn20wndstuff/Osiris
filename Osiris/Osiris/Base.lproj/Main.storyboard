@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkT-LZ-0KQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bni-Bu-zZi">
+                                        <rect key="frame" x="16" y="561" width="343" height="82"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="82" id="Y6P-Aw-f5T"/>
+                                        </constraints>
+                                        <string key="text">Original idea by @GeoSn0w
+Jailbreak by @Pwn20wnd
+Kernel Exploits by @i41nbeer
+QiLin Toolkit by @Morpheus______</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9p-GN-EWy">
+                                        <rect key="frame" x="16" y="304" width="343" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <state key="normal" title="Do it"/>
+                                        <connections>
+                                            <action selector="Jailbreak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9e-G1-DVS"/>
+                                            <segue destination="Xvq-4e-Tlv" kind="presentation" id="Qu3-Uq-Itw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsh-X4-KhH">
+                                        <rect key="frame" x="16" y="51" width="343" height="41"/>
+                                        <string key="text">Osiris Developer Jailbreak
+for iOS 11.0 - 11.4b3</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kernel Exploit: VFS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrs-Lj-S48">
+                                        <rect key="frame" x="16" y="100" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="I9p-GN-EWy" firstAttribute="centerY" secondItem="zkT-LZ-0KQ" secondAttribute="centerY" id="0ig-4g-f0T"/>
+                                    <constraint firstItem="Lrs-Lj-S48" firstAttribute="leading" secondItem="Zsh-X4-KhH" secondAttribute="leading" id="7uI-ug-koh"/>
+                                    <constraint firstItem="I9p-GN-EWy" firstAttribute="trailing" secondItem="Bni-Bu-zZi" secondAttribute="trailing" id="Q3t-72-Fe6"/>
+                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="leading" secondItem="zkT-LZ-0KQ" secondAttribute="leading" constant="16" id="Qrs-1G-uxj"/>
+                                    <constraint firstItem="Lrs-Lj-S48" firstAttribute="top" secondItem="Zsh-X4-KhH" secondAttribute="bottom" constant="8" symbolic="YES" id="SSI-Ei-96O"/>
+                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="top" secondItem="zkT-LZ-0KQ" secondAttribute="top" constant="51" id="aHQ-fh-BAf"/>
+                                    <constraint firstItem="Lrs-Lj-S48" firstAttribute="trailing" secondItem="Zsh-X4-KhH" secondAttribute="trailing" id="jA4-EL-Bjg"/>
+                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="mAW-K2-vJd"/>
+                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="trailing" secondItem="I9p-GN-EWy" secondAttribute="trailing" id="mth-CY-cea"/>
+                                    <constraint firstItem="I9p-GN-EWy" firstAttribute="leading" secondItem="Bni-Bu-zZi" secondAttribute="leading" id="oyE-sG-wTm"/>
+                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="leading" secondItem="I9p-GN-EWy" secondAttribute="leading" id="xVH-Ck-lNj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bni-Bu-zZi" secondAttribute="bottom" constant="24" id="yVD-wA-h3T"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="918-JZ-pA7"/>
+                            <constraint firstAttribute="trailing" secondItem="zkT-LZ-0KQ" secondAttribute="trailing" id="AOs-bR-KWX"/>
+                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e2U-bO-3SH"/>
+                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vJ5-MK-PH6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="DoItButton" destination="I9p-GN-EWy" id="VEu-87-v33"/>
+                        <outlet property="KernelExploitLabel" destination="Lrs-Lj-S48" id="IM9-eP-9xz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2qP-cQ-C9Y">
+            <objects>
+                <viewController id="Xvq-4e-Tlv" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="agF-Qn-yQk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRx-mt-dHC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-Pu-xl4">
+                                        <rect key="frame" x="16" y="51" width="343" height="41"/>
+                                        <string key="text">Osiris Developer Jailbreak
+for iOS 11.0 - 11.4b3</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-js-ea6">
+                                        <rect key="frame" x="16" y="561" width="343" height="82"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="82" id="lgj-vt-Z6r"/>
+                                        </constraints>
+                                        <string key="text">Original idea by @GeoSn0w
+Jailbreak by @Pwn20wnd
+Kernel Exploits by @i41nbeer
+QiLin Toolkit by @Morpheus______</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzl-mt-WK2">
+                                        <rect key="frame" x="16" y="242" width="343" height="183"/>
+                                        <string key="text">The jailbreak has worked
+
+HSP#4 was set as TFP0
+Auto Updates were disabled
+SSH was enabled
+Binpack was installed in /jb
+Filza was installed in /Applications
+
+You can exit the app now</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kernel Exploit: VFS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqg-C3-T2g">
+                                        <rect key="frame" x="16" y="100" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="heZ-Pu-xl4" firstAttribute="trailing" secondItem="Rzl-mt-WK2" secondAttribute="trailing" id="1Vv-61-Git"/>
+                                    <constraint firstItem="heZ-Pu-xl4" firstAttribute="top" secondItem="JRx-mt-dHC" secondAttribute="top" constant="51" id="Fy7-Qy-FMw"/>
+                                    <constraint firstItem="Rzl-mt-WK2" firstAttribute="leading" secondItem="1GC-js-ea6" secondAttribute="leading" id="KRK-oQ-NHJ"/>
+                                    <constraint firstItem="oqg-C3-T2g" firstAttribute="trailing" secondItem="heZ-Pu-xl4" secondAttribute="trailing" id="Lop-Bk-eRq"/>
+                                    <constraint firstAttribute="bottom" secondItem="1GC-js-ea6" secondAttribute="bottom" constant="24" id="PP9-bU-iLU"/>
+                                    <constraint firstItem="heZ-Pu-xl4" firstAttribute="leading" secondItem="JRx-mt-dHC" secondAttribute="leading" constant="16" id="QXl-XP-Bj2"/>
+                                    <constraint firstItem="heZ-Pu-xl4" firstAttribute="leading" secondItem="Rzl-mt-WK2" secondAttribute="leading" id="UTY-MD-0XG"/>
+                                    <constraint firstItem="Rzl-mt-WK2" firstAttribute="centerY" secondItem="JRx-mt-dHC" secondAttribute="centerY" id="XOM-la-E6K"/>
+                                    <constraint firstItem="heZ-Pu-xl4" firstAttribute="centerX" secondItem="JRx-mt-dHC" secondAttribute="centerX" id="c0b-sW-8xZ"/>
+                                    <constraint firstItem="oqg-C3-T2g" firstAttribute="top" secondItem="heZ-Pu-xl4" secondAttribute="bottom" constant="8" symbolic="YES" id="h9j-ie-kjZ"/>
+                                    <constraint firstItem="oqg-C3-T2g" firstAttribute="leading" secondItem="heZ-Pu-xl4" secondAttribute="leading" id="lak-Sy-JRv"/>
+                                    <constraint firstItem="Rzl-mt-WK2" firstAttribute="trailing" secondItem="1GC-js-ea6" secondAttribute="trailing" id="oxG-hD-fiE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JRx-mt-dHC" secondAttribute="trailing" id="Num-Sl-O66"/>
+                            <constraint firstItem="JRx-mt-dHC" firstAttribute="leading" secondItem="agF-Qn-yQk" secondAttribute="leading" id="PS2-8a-OQN"/>
+                            <constraint firstItem="JRx-mt-dHC" firstAttribute="top" secondItem="agF-Qn-yQk" secondAttribute="top" id="fog-0I-1r0"/>
+                            <constraint firstItem="JRx-mt-dHC" firstAttribute="bottom" secondItem="H3J-Gw-6BD" secondAttribute="bottom" id="lnU-ia-5Jy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H3J-Gw-6BD"/>
+                    </view>
+                    <connections>
+                        <outlet property="KernelExploitLabel" destination="oqg-C3-T2g" id="gFJ-h4-xAo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uhl-eY-1g5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>
