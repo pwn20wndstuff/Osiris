@@ -6,8 +6,8 @@ This jailbreak comes with Jonathan Levin's 64-Bit binary pack available at <a hr
 
 ### Credits and Acknowledgements
 <ul>
-<li>Original Osiris Jailbreak by <a href="https://twitter.com/FCE365">GeoSn0w</a></li>
-<li>Rewritten Osiris Jailbreak by <a href="https://twitter.com/pwn20wnd">Pwn20wnd</a></li>
+<li><a href="https://github.com/GeoSn0w/Osiris-Jailbreak">Original Osiris Jailbreak Idea by</a> <a href="https://twitter.com/FCE365">GeoSn0w</a></li>
+<li>Jailbreak by <a href="https://twitter.com/pwn20wnd">Pwn20wnd</a></li>
 <li>Kernel Exploits by <a href="https://twitter.com/i41nbeer">Ian Beer of Google Project Zero</a></li>
 <li>QiLin Toolkit by <a href="https://twitter.com/Morpheus______">Jonathan Levin</a></li>
 </ul>
