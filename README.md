@@ -5,7 +5,9 @@ Osiris is a developer jailbreak for iOS 11.0 - 11.4b3. This jailbreak is recomme
 This jailbreak comes with Jonathan Levin's 64-Bit binary pack available at <a href = "http://newosxbook.com/tools/iOSBinaries.html">newosxbook.com</a>
 
 ### Credits and Acknowledgements
-Original Osiris Jailbreak by <a href="https://twitter.com/FCE365">GeoSn0w</a>
-Rewritten Osiris Jailbreak by <a href="https://twitter.com/pwn20wnd">Pwn20wnd</a>
-Kernel Exploits by <a href="https://twitter.com/i41nbeer">Ian Beer of Google Project Zero</a>
-QiLin Toolkit by <a href="https://twitter.com/Morpheus______">Jonathan Levin</a>
+<ul>
+<li>Original Osiris Jailbreak by <a href="https://twitter.com/FCE365">GeoSn0w</a></li>
+<li>Rewritten Osiris Jailbreak by <a href="https://twitter.com/pwn20wnd">Pwn20wnd</a></li>
+<li>Kernel Exploits by <a href="https://twitter.com/i41nbeer">Ian Beer of Google Project Zero</a></li>
+<li>QiLin Toolkit by <a href="https://twitter.com/Morpheus______">Jonathan Levin</a></li>
+</ul>
