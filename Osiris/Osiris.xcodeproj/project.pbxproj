@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213B2FE32195FCBA008598A8 /* unlocknvram.c in Sources */ = {isa = PBXBuildFile; fileRef = 213B2FE22195FCB9008598A8 /* unlocknvram.c */; };
 		21C0FC732187A0FC00204F8D /* multi_path_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC6F2187A0FB00204F8D /* multi_path_sploit.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
 		21C0FC742187A0FC00204F8D /* empty_list_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC702187A0FB00204F8D /* empty_list_sploit.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
 		21C0FC7B2187A12000204F8D /* early_kalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC752187A11F00204F8D /* early_kalloc.c */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		213B2FE12195FCB9008598A8 /* unlocknvram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unlocknvram.h; sourceTree = "<group>"; };
+		213B2FE22195FCB9008598A8 /* unlocknvram.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unlocknvram.c; sourceTree = "<group>"; };
 		21C0FC6F2187A0FB00204F8D /* multi_path_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multi_path_sploit.c; sourceTree = "<group>"; };
 		21C0FC702187A0FB00204F8D /* empty_list_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = empty_list_sploit.c; sourceTree = "<group>"; };
 		21C0FC712187A0FC00204F8D /* empty_list_sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = empty_list_sploit.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				21FF3E012185F11300B1AE49 /* tar.tar */,
 				21FF3DFC2185F02F00B1AE49 /* Filza.tar.lzma */,
 				21FF3DF82185EE5400B1AE49 /* binpack64-256.tar.lzma */,
+				213B2FE22195FCB9008598A8 /* unlocknvram.c */,
+				213B2FE12195FCB9008598A8 /* unlocknvram.h */,
 				21FF3DFF2185F06800B1AE49 /* untar.c */,
 				21FF3DFE2185F06800B1AE49 /* untar.h */,
 				21FF3DED2185C0E500B1AE49 /* kexecute.h */,
@@ -332,6 +337,7 @@
 				21C0FC7D2187A12000204F8D /* async_wake.c in Sources */,
 				21FF3DEB2185BF9600B1AE49 /* kutils.c in Sources */,
 				21FF3DE12185B28800B1AE49 /* offsets.m in Sources */,
+				213B2FE32195FCBA008598A8 /* unlocknvram.c in Sources */,
 				21FF3E002185F06900B1AE49 /* untar.c in Sources */,
 				21FF3DA42185AB0800B1AE49 /* AppDelegate.m in Sources */,
 				21C0FC732187A0FC00204F8D /* multi_path_sploit.c in Sources */,

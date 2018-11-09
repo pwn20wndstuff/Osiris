@@ -51,11 +51,32 @@ for iOS 11.0 - 11.4b3</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kernel Exploit: VFS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrs-Lj-S48">
-                                        <rect key="frame" x="16" y="100" width="343" height="21"/>
+                                        <rect key="frame" x="16" y="100" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPB-bm-VnX">
+                                        <rect key="frame" x="49" y="128" width="276.5" height="33"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boot Nonce: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybs-GZ-d0G">
+                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rn5-jh-HP7">
+                                                <rect key="frame" x="99.5" y="0.0" width="177" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="0xbd34a880be0b53f3">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedOnBootNonceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="weN-1F-RJX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -65,7 +86,9 @@ for iOS 11.0 - 11.4b3</string>
                                     <constraint firstItem="Zsh-X4-KhH" firstAttribute="leading" secondItem="zkT-LZ-0KQ" secondAttribute="leading" constant="16" id="Qrs-1G-uxj"/>
                                     <constraint firstItem="Lrs-Lj-S48" firstAttribute="top" secondItem="Zsh-X4-KhH" secondAttribute="bottom" constant="8" symbolic="YES" id="SSI-Ei-96O"/>
                                     <constraint firstItem="Zsh-X4-KhH" firstAttribute="top" secondItem="zkT-LZ-0KQ" secondAttribute="top" constant="51" id="aHQ-fh-BAf"/>
+                                    <constraint firstItem="yPB-bm-VnX" firstAttribute="top" secondItem="Lrs-Lj-S48" secondAttribute="bottom" constant="7" id="d2I-gA-g7U"/>
                                     <constraint firstItem="Lrs-Lj-S48" firstAttribute="trailing" secondItem="Zsh-X4-KhH" secondAttribute="trailing" id="jA4-EL-Bjg"/>
+                                    <constraint firstItem="yPB-bm-VnX" firstAttribute="centerX" secondItem="Lrs-Lj-S48" secondAttribute="centerX" id="l81-QJ-ztZ"/>
                                     <constraint firstItem="Zsh-X4-KhH" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="mAW-K2-vJd"/>
                                     <constraint firstItem="Zsh-X4-KhH" firstAttribute="trailing" secondItem="I9p-GN-EWy" secondAttribute="trailing" id="mth-CY-cea"/>
                                     <constraint firstItem="I9p-GN-EWy" firstAttribute="leading" secondItem="Bni-Bu-zZi" secondAttribute="leading" id="oyE-sG-wTm"/>
@@ -84,6 +107,7 @@ for iOS 11.0 - 11.4b3</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="BootNonceButton" destination="Rn5-jh-HP7" id="Jas-dw-fi1"/>
                         <outlet property="DoItButton" destination="I9p-GN-EWy" id="VEu-87-v33"/>
                         <outlet property="KernelExploitLabel" destination="Lrs-Lj-S48" id="IM9-eP-9xz"/>
                     </connections>

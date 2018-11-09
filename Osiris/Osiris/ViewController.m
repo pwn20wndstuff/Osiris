@@ -23,6 +23,7 @@
 #include "iokit.h"
 #include "kutils.h"
 #include "untar.h"
+#include "unlocknvram.h"
 
 @interface ViewController ()
 
@@ -811,6 +812,10 @@ void exploit() {
     assert(unlink(filename) == 0);
     writeTestFile("/var/mobile/test.txt");
     borrowEntitlementsFromDonor("/usr/bin/sysdiagnose", "--help");
+    assert(unlocknvram() == 0);
+    assert(execCommandAndWait("/usr/sbin/nvram", (char *)[[NSString stringWithFormat:@"com.apple.System.boot-nonce=%@", [[NSUserDefaults standardUserDefaults] objectForKey:@K_BOOT_NONCE]] UTF8String], NULL, NULL, NULL, NULL) == 0);
+    assert(execCommandAndWait("/usr/sbin/nvram", "IONVRAM-FORCESYNCNOW-PROPERTY=com.apple.System.boot-nonce", NULL, NULL, NULL, NULL) == 0);
+    assert(locknvram() == 0);
     InitializeKernelExecution(add_x0_x0_0x40_ret);
     uint64_t vfs_context = _vfs_context(vfs_context_current, zone_map_ref);
     assert(vfs_context);
@@ -951,6 +956,23 @@ void exploit() {
     exploit();
 }
 
+- (IBAction)tappedOnBootNonceButton:(id)sender {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Set Boot Nonce" message:@"Enter Boot Nonce" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[NSUserDefaults standardUserDefaults] setObject:[[[alertController textFields] firstObject] text] forKey:@K_BOOT_NONCE];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self.BootNonceButton setTitle:[[NSUserDefaults standardUserDefaults] objectForKey:@K_BOOT_NONCE] forState:UIControlStateNormal];
+    }];
+    UIAlertAction *Cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:Cancel];
+    [alertController addAction:OK];
+    [alertController setPreferredAction:OK];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        [textField setPlaceholder:[[NSUserDefaults standardUserDefaults] objectForKey:@K_BOOT_NONCE]];
+    }];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -964,21 +986,22 @@ void exploit() {
     int Exploit = selectExploit();
     switch (Exploit) {
         case 0: {
-            self.KernelExploitLabel.text = @"Kernel Exploit: VFS";
+            [self.KernelExploitLabel setText:@"Kernel Exploit: VFS"];
             break;
         }
         case 1: {
-            self.KernelExploitLabel.text = @"Kernel Exploit: MPTCP";
+            [self.KernelExploitLabel setText:@"Kernel Exploit: MPTCP"];
             break;
         }
         case 2: {
-            self.KernelExploitLabel.text = @"Kernel Exploit: IOSurface";
+            [self.KernelExploitLabel setText:@"Kernel Exploit: IOSurface"];
             break;
         }
         default:
-            self.KernelExploitLabel.text = @"Kernel Exploit: None";
+            [self.KernelExploitLabel setText:@"Kernel Exploit: None"];
             break;
     }
+    [self.BootNonceButton setTitle:[[NSUserDefaults standardUserDefaults] objectForKey:@K_BOOT_NONCE] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#include "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@K_BOOT_NONCE] == nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"0xbd34a880be0b53f3" forKey:@K_BOOT_NONCE];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     return YES;
 }
 

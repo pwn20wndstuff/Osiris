@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define K_BOOT_NONCE "BootNonce"
+
 @interface ViewController : UIViewController
 
 enum {
@@ -17,6 +19,7 @@ enum {
 };
 @property (weak, nonatomic) IBOutlet UILabel *KernelExploitLabel;
 @property (weak, nonatomic) IBOutlet UIButton *DoItButton;
+@property (weak, nonatomic) IBOutlet UIButton *BootNonceButton;
 
 @end
 
