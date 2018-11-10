@@ -21,12 +21,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bni-Bu-zZi" userLabel="Original idea by @GeoSn0w Jailbreak by @Pwn20wnd Kernel Exploits by @i41nbeer QiLin Toolkit by @Morpheus______">
-                                        <rect key="frame" x="16" y="561" width="343" height="82"/>
+                                        <rect key="frame" x="16" y="521" width="343" height="122"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="82" id="Y6P-Aw-f5T"/>
+                                            <constraint firstAttribute="height" constant="122" id="Y6P-Aw-f5T"/>
                                         </constraints>
-                                        <string key="text">Original idea by @GeoSn0w
-Jailbreak by @Pwn20wnd
+                                        <string key="text">Jailbreak by @Pwn20wnd
+PatchFinder64 by @xerub
+HSP#4 and NVRAM by @stek29
+Original idea by @GeoSn0w
 Kernel Exploits by @i41nbeer
 QiLin Toolkit by @Morpheus______</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -136,12 +138,14 @@ for iOS 11.0 - 11.4b3</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-js-ea6">
-                                        <rect key="frame" x="16" y="561" width="343" height="82"/>
+                                        <rect key="frame" x="16" y="521" width="343" height="122"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="82" id="lgj-vt-Z6r"/>
+                                            <constraint firstAttribute="height" constant="122" id="lgj-vt-Z6r"/>
                                         </constraints>
-                                        <string key="text">Original idea by @GeoSn0w
-Jailbreak by @Pwn20wnd
+                                        <string key="text">Jailbreak by @Pwn20wnd
+PatchFinder64 by @xerub
+HSP#4 and NVRAM by @stek29
+Original idea by @GeoSn0w
 Kernel Exploits by @i41nbeer
 QiLin Toolkit by @Morpheus______</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
