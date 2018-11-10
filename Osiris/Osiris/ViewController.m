@@ -909,6 +909,11 @@ void exploit() {
         assert(chdir("/jb") == 0);
         rv = execCommandAndWait("/jb/tar", "--use-compress-program=/jb/lzma", "-xvpkf", "/jb/binpack64-256.tar.lzma", NULL, NULL);
         assert(rv == 512 || rv == 0);
+        assert(rename("/jb/etc/motd", "/etc/motd") == 0);
+        assert(unlink("/jb/removeMe.sh") == 0);
+        assert(moveFileFromAppDir("removeMe.sh", "/jb/removeMe.sh") == 0);
+        assert(chmod("/jb/removeMe.sh", 0755) == 0);
+        assert(chown("/jb/removeMe.sh", 0, 0) == 0);
     }
     int run_uicache = 0;
     if (access("/Applications/Filza.app", F_OK)) {
