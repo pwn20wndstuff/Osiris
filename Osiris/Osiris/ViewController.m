@@ -612,7 +612,7 @@ char *copyBootHash(void)
 const char *systemSnapshot()
 {
     char *BootHash = copyBootHash();
-    assert(BootHash != NULL);
+    _assert(BootHash != NULL);
     const char *SystemSnapshot = [[NSString stringWithFormat:@APPLESNAP @"%s", BootHash] UTF8String];
     free(BootHash);
     return SystemSnapshot;
@@ -752,96 +752,96 @@ void exploit() {
             break;
     }
     printf("tfp0: 0x%x\n", tfp0);
-    assert(MACH_PORT_VALID(tfp0));
+    _assert(MACH_PORT_VALID(tfp0));
     uint64_t kernel_base = (uint64_t)get_kernel_base(tfp0);
     printf("kernel_base: 0x%016llx\n", kernel_base);
     uint64_t kernel_slide = kernel_base - KERNEL_SEARCH_ADDRESS;
     printf("kernel_slide: 0x%016llx\n", kernel_slide);
-    assert(InitializePatchFinder64(kernel_base) == 0);
+    _assert(InitializePatchFinder64(kernel_base) == 0);
     uint64_t kernproc = find_kernproc();
     printf("kernproc: 0x%016llx\n", kernproc);
-    assert(kernproc);
+    _assert(kernproc);
     uint64_t rootvnode = find_rootvnode();
     printf("rootvnode: 0x%016llx\n", rootvnode);
-    assert(rootvnode);
+    _assert(rootvnode);
     uint64_t zone_map_ref = find_zone_map_ref();
     printf("zone_map_ref: 0x%016llx\n", zone_map_ref);
-    assert(zone_map_ref);
+    _assert(zone_map_ref);
     uint64_t vfs_context_current = find_vfs_context_current();
     printf("vfs_context_current: 0x%016llx\n", vfs_context_current);
-    assert(vfs_context_current);
+    _assert(vfs_context_current);
     uint64_t vnode_lookup = find_vnode_lookup();
     printf("vnode_lookup: 0x%016llx\n", vnode_lookup);
-    assert(vnode_lookup);
+    _assert(vnode_lookup);
     uint64_t vnode_put = find_vnode_put();
     printf("vnode_put: 0x%016llx\n", vnode_put);
-    assert(vnode_put);
+    _assert(vnode_put);
     uint64_t add_x0_x0_0x40_ret = find_add_x0_x0_0x40_ret();
     printf("add_x0_x0_0x40_ret: 0x%016llx\n", add_x0_x0_0x40_ret);
-    assert(add_x0_x0_0x40_ret);
+    _assert(add_x0_x0_0x40_ret);
     uint64_t offsetof_v_mount = 0xd8;
     printf("offsetof_v_mount: 0x%016llx\n", offsetof_v_mount);
-    assert(offsetof_v_mount);
+    _assert(offsetof_v_mount);
     uint64_t offsetof_mnt_flag = 0x70;
     printf("offsetof_mnt_flag: 0x%016llx\n", offsetof_mnt_flag);
-    assert(offsetof_mnt_flag);
+    _assert(offsetof_mnt_flag);
     uint64_t offsetof_v_specinfo = 0x78;
     printf("offsetof_v_specinfo: 0x%016llx\n", offsetof_v_specinfo);
-    assert(offsetof_v_specinfo);
+    _assert(offsetof_v_specinfo);
     uint64_t offsetof_si_flags = 0x10;
     printf("offsetof_si_flags: 0x%016llx\n", offsetof_si_flags);
-    assert(offsetof_si_flags);
+    _assert(offsetof_si_flags);
     TerminatePatchFinder64();
-    assert(initQiLin(tfp0, kernel_base) == 0);
+    _assert(initQiLin(tfp0, kernel_base) == 0);
     if (kCFCoreFoundationVersionNumber >= 1452.23) {
         setKernelSymbol("_kernproc", kernproc - kernel_slide);
         setKernelSymbol("_rootvnode", rootvnode - kernel_slide);
     }
-    assert(findKernelSymbol("_kernproc"));
-    assert(findKernelSymbol("_rootvnode"));
-    assert(rootifyMe() == 0);
-    assert(getuid() == 0);
-    assert(platformizeMe() == 0);
+    _assert(findKernelSymbol("_kernproc"));
+    _assert(findKernelSymbol("_rootvnode"));
+    _assert(rootifyMe() == 0);
+    _assert(getuid() == 0);
+    _assert(platformizeMe() == 0);
     ShaiHuludMe(0);
 #define writeTestFile(filename) \
     if (!access(filename, F_OK)) \
-        assert(unlink(filename) == 0); \
-    assert(fclose(fopen(filename, "w")) == 0); \
-    assert(chmod(filename, 0644) == 0); \
-    assert(chown(filename, 0, 0) == 0); \
-    assert(unlink(filename) == 0);
+        _assert(unlink(filename) == 0); \
+    _assert(fclose(fopen(filename, "w")) == 0); \
+    _assert(chmod(filename, 0644) == 0); \
+    _assert(chown(filename, 0, 0) == 0); \
+    _assert(unlink(filename) == 0);
     writeTestFile("/var/mobile/test.txt");
     borrowEntitlementsFromDonor("/usr/bin/sysdiagnose", "--help");
-    assert(unlocknvram() == 0);
-    assert(execCommandAndWait("/usr/sbin/nvram", (char *)[[NSString stringWithFormat:@"com.apple.System.boot-nonce=%@", [[NSUserDefaults standardUserDefaults] objectForKey:@K_BOOT_NONCE]] UTF8String], NULL, NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/usr/sbin/nvram", "IONVRAM-FORCESYNCNOW-PROPERTY=com.apple.System.boot-nonce", NULL, NULL, NULL, NULL) == 0);
-    assert(locknvram() == 0);
+    _assert(unlocknvram() == 0);
+    _assert(execCommandAndWait("/usr/sbin/nvram", (char *)[[NSString stringWithFormat:@"com.apple.System.boot-nonce=%@", [[NSUserDefaults standardUserDefaults] objectForKey:@K_BOOT_NONCE]] UTF8String], NULL, NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/usr/sbin/nvram", "IONVRAM-FORCESYNCNOW-PROPERTY=com.apple.System.boot-nonce", NULL, NULL, NULL, NULL) == 0);
+    _assert(locknvram() == 0);
     InitializeKernelExecution(add_x0_x0_0x40_ret);
     uint64_t vfs_context = _vfs_context(vfs_context_current, zone_map_ref);
-    assert(vfs_context);
+    _assert(vfs_context);
     uint64_t devVnode = getVnodeAtPath(vfs_context, "/dev/disk0s1s1", vnode_lookup);
-    assert(devVnode);
+    _assert(devVnode);
     WriteAnywhere32(ReadAnywhere64(devVnode + offsetof_v_specinfo) + offsetof_si_flags, 0);
-    assert(ReadAnywhere64(ReadAnywhere64(devVnode + offsetof_v_specinfo) + offsetof_si_flags) == 0);
-    assert(_vnode_put(vnode_put, devVnode) == 0);
+    _assert(ReadAnywhere64(ReadAnywhere64(devVnode + offsetof_v_specinfo) + offsetof_si_flags) == 0);
+    _assert(_vnode_put(vnode_put, devVnode) == 0);
     TerminateKernelExecution();
     int rv = snapshot_list("/");
     switch (rv) {
         case -1: {
             if (!access("/private/var/tmp/rootfsmnt", F_OK))
-                assert(rmdir("/private/var/tmp/rootfsmnt") == 0);
-            assert(mkdir("/private/var/tmp/rootfsmnt", 0755) == 0);
-            assert(spawnAndShaiHulud("/sbin/mount_apfs", "/dev/disk0s1s1", "/private/var/tmp/rootfsmnt", NULL, NULL, NULL) == 0);
+                _assert(rmdir("/private/var/tmp/rootfsmnt") == 0);
+            _assert(mkdir("/private/var/tmp/rootfsmnt", 0755) == 0);
+            _assert(spawnAndShaiHulud("/sbin/mount_apfs", "/dev/disk0s1s1", "/private/var/tmp/rootfsmnt", NULL, NULL, NULL) == 0);
             borrowEntitlementsFromDonor("/sbin/fsck_apfs", NULL);
             rv = snapshot_list("/private/var/tmp/rootfsmnt");
-            assert(!(rv == -1));
-            assert(snapshot_rename("/private/var/tmp/rootfsmnt", systemSnapshot(), "orig-fs") == 0);
-            assert(reboot(0x400) == 0);
+            _assert(!(rv == -1));
+            _assert(snapshot_rename("/private/var/tmp/rootfsmnt", systemSnapshot(), "orig-fs") == 0);
+            _assert(reboot(0x400) == 0);
             break;
         }
         case 0: {
             borrowEntitlementsFromDonor("/sbin/fsck_apfs", NULL);
-            assert(snapshot_create("/", "orig-fs") == 0);
+            _assert(snapshot_create("/", "orig-fs") == 0);
             borrowEntitlementsFromDonor("/usr/bin/sysdiagnose", "--help");
         }
         default:
@@ -854,107 +854,108 @@ void exploit() {
     v_flag = v_flag & ~MNT_RDONLY;
     WriteAnywhere32(v_mount + offsetof_mnt_flag, v_flag & ~MNT_ROOTFS);
     char *dev_path = "/dev/disk0s1s1";
-    assert(mount("apfs", "/", MNT_UPDATE, (void *)&dev_path) == 0);
+    _assert(mount("apfs", "/", MNT_UPDATE, (void *)&dev_path) == 0);
     v_mount = ReadAnywhere64(rootfs_vnode + offsetof_v_mount);
     WriteAnywhere32(v_mount + offsetof_mnt_flag, v_flag);
     writeTestFile("/test.txt");
-    assert(castrateAmfid() == 0);
-    assert(remap_tfp0_set_hsp4(&tfp0, zone_map_ref) == 0);
+    _assert(castrateAmfid() == 0);
+    _assert(remap_tfp0_set_hsp4(&tfp0, zone_map_ref) == 0);
     if (!(is_directory("/jb") == 1)) {
         [[NSFileManager defaultManager] removeItemAtPath:@"/jb" error:nil];
     }
     if (access("/jb", F_OK)) {
-        assert(mkdir("/jb", 0755) == 0); assert(chown("/jb", 0, 0) == 0);
+        _assert(mkdir("/jb", 0755) == 0); _assert(chown("/jb", 0, 0) == 0);
     }
-    assert(chdir("/jb") == 0);
+    _assert(chdir("/jb") == 0);
     if (!access("/jb/tar", F_OK)) {
-        assert(unlink("/jb/tar") == 0);
+        _assert(unlink("/jb/tar") == 0);
     }
-    assert(moveFileFromAppDir("tar.tar", "/jb/tar.tar") == 0);
+    _assert(moveFileFromAppDir("tar.tar", "/jb/tar.tar") == 0);
     FILE *a = fopen("/jb/tar.tar", "rb");
-    assert(a != NULL);
+    _assert(a != NULL);
     untar(a, "tar");
-    assert(fclose(a) == 0);
-    assert(chmod("/jb/tar", 0755) == 0);
-    assert(chown("/jb/tar", 0, 0) == 0);
+    _assert(fclose(a) == 0);
+    _assert(chmod("/jb/tar", 0755) == 0);
+    _assert(chown("/jb/tar", 0, 0) == 0);
     if (!access("/jb/lzma", F_OK)) {
-        assert(unlink("/jb/lzma") == 0);
+        _assert(unlink("/jb/lzma") == 0);
     }
-    assert(moveFileFromAppDir("lzma.tar", "/jb/lzma.tar") == 0);
+    _assert(moveFileFromAppDir("lzma.tar", "/jb/lzma.tar") == 0);
     a = fopen("/jb/lzma.tar", "rb");
-    assert(a != NULL);
+    _assert(a != NULL);
     untar(a, "lzma");
-    assert(fclose(a) == 0);
-    assert(chmod("/jb/lzma", 0755) == 0);
-    assert(chown("/jb/lzma", 0, 0) == 0);
+    _assert(fclose(a) == 0);
+    _assert(chmod("/jb/lzma", 0755) == 0);
+    _assert(chown("/jb/lzma", 0, 0) == 0);
     if (!access("/jb/binpack64-256.tar.lzma", F_OK)) {
-        assert(unlink("/jb/binpack64-256.tar.lzma") == 0);
+        _assert(unlink("/jb/binpack64-256.tar.lzma") == 0);
     }
-    assert(moveFileFromAppDir("binpack64-256.tar.lzma", "/jb/binpack64-256.tar.lzma") == 0);
-    assert(chmod("/jb/binpack64-256.tar.lzma", 0644) == 0);
-    assert(chown("/jb/binpack64-256.tar.lzma", 0, 0) == 0);
+    _assert(moveFileFromAppDir("binpack64-256.tar.lzma", "/jb/binpack64-256.tar.lzma") == 0);
+    _assert(chmod("/jb/binpack64-256.tar.lzma", 0644) == 0);
+    _assert(chown("/jb/binpack64-256.tar.lzma", 0, 0) == 0);
     if (!access("/jb/dropbear.plist", F_OK)) {
-        assert(unlink("/jb/dropbear.plist") == 0);
+        _assert(unlink("/jb/dropbear.plist") == 0);
     }
-    assert(moveFileFromAppDir("dropbear.plist", "/jb/dropbear.plist") == 0);
-    assert(chmod("/jb/dropbear.plist", 0644) == 0);
-    assert(chown("/jb/dropbear.plist", 0, 0) == 0);
+    _assert(moveFileFromAppDir("dropbear.plist", "/jb/dropbear.plist") == 0);
+    _assert(chmod("/jb/dropbear.plist", 0644) == 0);
+    _assert(chown("/jb/dropbear.plist", 0, 0) == 0);
     if (!access("/jb/Filza.tar.lzma", F_OK)) {
-        assert(unlink("/jb/Filza.tar.lzma") == 0);
+        _assert(unlink("/jb/Filza.tar.lzma") == 0);
     }
-    assert(moveFileFromAppDir("Filza.tar.lzma", "/jb/Filza.tar.lzma") == 0);
-    assert(chmod("/jb/Filza.tar.lzma", 0644) == 0);
-    assert(chown("/jb/Filza.tar.lzma", 0, 0) == 0);
+    _assert(moveFileFromAppDir("Filza.tar.lzma", "/jb/Filza.tar.lzma") == 0);
+    _assert(chmod("/jb/Filza.tar.lzma", 0644) == 0);
+    _assert(chown("/jb/Filza.tar.lzma", 0, 0) == 0);
     if (access("/jb/amfidebilitate", F_OK)) {
-        assert(chdir("/jb") == 0);
+        _assert(chdir("/jb") == 0);
         rv = execCommandAndWait("/jb/tar", "--use-compress-program=/jb/lzma", "-xvpkf", "/jb/binpack64-256.tar.lzma", NULL, NULL);
-        assert(rv == 512 || rv == 0);
-        assert(rename("/jb/etc/motd", "/etc/motd") == 0);
-        assert(unlink("/jb/removeMe.sh") == 0);
-        assert(moveFileFromAppDir("removeMe.sh", "/jb/removeMe.sh") == 0);
-        assert(chmod("/jb/removeMe.sh", 0755) == 0);
-        assert(chown("/jb/removeMe.sh", 0, 0) == 0);
+        _assert(rv == 512 || rv == 0);
+        _assert(rename("/jb/etc/motd", "/etc/motd") == 0);
+        _assert(unlink("/jb/removeMe.sh") == 0);
+        _assert(moveFileFromAppDir("removeMe.sh", "/jb/removeMe.sh") == 0);
+        _assert(chmod("/jb/removeMe.sh", 0755) == 0);
+        _assert(chown("/jb/removeMe.sh", 0, 0) == 0);
     }
     int run_uicache = 0;
     if (access("/Applications/Filza.app", F_OK)) {
-        assert(chdir("/") == 0);
+        _assert(chdir("/") == 0);
         rv = execCommandAndWait("/jb/tar", "--use-compress-program=/jb/lzma", "-xvpkf", "/jb/Filza.tar.lzma", NULL, NULL);
-        assert(rv == 512 || rv == 0);
+        _assert(rv == 512 || rv == 0);
         run_uicache = 1;
     }
-    assert(execCommandAndWait("/jb/bin/bash", "-c", "> /.cydia_no_stash", NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/tar.tar", NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/lzma.tar", NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/tar", NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/lzma", NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/binpack64-256.tar.lzma", NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/Filza.tar.lzma", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/bash", "-c", "> /.cydia_no_stash", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/tar.tar", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/lzma.tar", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/tar", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/lzma", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/binpack64-256.tar.lzma", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/Filza.tar.lzma", NULL, NULL, NULL) == 0);
     
     NSMutableDictionary *md = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.apple.springboard.plist"];
-    assert(md != nil);
+    _assert(md != nil);
     for (int i = 0; !(i >= 5 || [md[@"SBShowNonDefaultSystemApps"] isEqual:@(YES)]); i++) {
-        assert(kill(findPidOfProcess("cfprefsd"), SIGSTOP) == 0);
+        _assert(kill(findPidOfProcess("cfprefsd"), SIGSTOP) == 0);
         md[@"SBShowNonDefaultSystemApps"] = @(YES);
-        assert([md writeToFile:@"/var/mobile/Library/Preferences/com.apple.springboard.plist" atomically:YES] == 1);
-        assert(kill(findPidOfProcess("cfprefsd"), SIGKILL) == 0);
+        _assert([md writeToFile:@"/var/mobile/Library/Preferences/com.apple.springboard.plist" atomically:YES] == 1);
+        _assert(kill(findPidOfProcess("cfprefsd"), SIGKILL) == 0);
         md = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.apple.springboard.plist"];
-        assert(md != nil);
+        _assert(md != nil);
     }
-    assert([md[@"SBShowNonDefaultSystemApps"] isEqual:@(YES)]);
-    assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
-    assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
+    _assert([md[@"SBShowNonDefaultSystemApps"] isEqual:@(YES)]);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
     if (access("/etc/dropbear", F_OK)) {
-        assert(mkdir("/etc/dropbear", 0755) == 0);
+        _assert(mkdir("/etc/dropbear", 0755) == 0);
     }
-    assert(execCommandAndWait("/jb/bin/bash", "-c", (char *)[[NSString stringWithFormat:@"/jb/usr/bin/printf '0x%016llx\n' > /private/var/tmp/slide.txt", kernel_slide] UTF8String], NULL, NULL, NULL) == 0);
-    assert(spawnAndPlatformizeAndWait("/jb/bin/launchctl", "load", "/jb/dropbear.plist", NULL, NULL, NULL) == 0);
-    assert(spawnAndPlatformize("/jb/amfidebilitate", NULL, NULL, NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/bash", "-c", (char *)[[NSString stringWithFormat:@"/jb/usr/bin/printf '0x%016llx\n' > /private/var/tmp/slide.txt", kernel_slide] UTF8String], NULL, NULL, NULL) == 0);
+    _assert(spawnAndPlatformizeAndWait("/jb/bin/launchctl", "load", "/jb/dropbear.plist", NULL, NULL, NULL) == 0);
+    _assert(spawnAndPlatformize("/jb/amfidebilitate", NULL, NULL, NULL, NULL, NULL) == 0);
     sleep(2);
     if (run_uicache) {
-        assert(execCommandAndWait("/jb/usr/bin/uicache", NULL, NULL, NULL, NULL, NULL) == 0);
+        _assert(execCommandAndWait("/jb/usr/bin/uicache", NULL, NULL, NULL, NULL, NULL) == 0);
     }
+    RESET_LOGS();
 }
 
 - (IBAction)Jailbreak:(id)sender {

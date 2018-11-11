@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#include "ViewController.h"
 
 int main(int argc, char * argv[]) {
+    START_LOGGING();
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
