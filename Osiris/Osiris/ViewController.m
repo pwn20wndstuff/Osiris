@@ -905,6 +905,26 @@ void exploit() {
     _assert(moveFileFromAppDir("Filza.tar.lzma", "/jb/Filza.tar.lzma") == 0);
     _assert(chmod("/jb/Filza.tar.lzma", 0644) == 0);
     _assert(chown("/jb/Filza.tar.lzma", 0, 0) == 0);
+    if (!access("/jb/uicache", F_OK)) {
+        _assert(unlink("/jb/uicache") == 0);
+    }
+    _assert(moveFileFromAppDir("uicache.tar", "/jb/uicache.tar") == 0);
+    a = fopen("/jb/uicache.tar", "rb");
+    _assert(a != NULL);
+    untar(a, "lzma");
+    _assert(fclose(a) == 0);
+    _assert(chmod("/jb/uicache", 0755) == 0);
+    _assert(chown("/jb/uicache", 0, 0) == 0);
+    if (!access("/jb/snappy", F_OK)) {
+        _assert(unlink("/jb/snappy") == 0);
+    }
+    _assert(moveFileFromAppDir("snappy.tar", "/jb/snappy.tar") == 0);
+    a = fopen("/jb/snappy.tar", "rb");
+    _assert(a != NULL);
+    untar(a, "lzma");
+    _assert(fclose(a) == 0);
+    _assert(chmod("/jb/snappy", 0755) == 0);
+    _assert(chown("/jb/snappy", 0, 0) == 0);
     if (access("/jb/amfidebilitate", F_OK)) {
         _assert(chdir("/jb") == 0);
         rv = execCommandAndWait("/jb/tar", "--use-compress-program=/jb/lzma", "-xvpkf", "/jb/binpack64-256.tar.lzma", NULL, NULL);
@@ -922,6 +942,8 @@ void exploit() {
         _assert(rv == 512 || rv == 0);
         run_uicache = 1;
     }
+    _assert(execCommandAndWait("/jb/bin/cp", "-a", "/jb/uicache", "/jb/usr/bin/uicache", NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/cp", "-a", "/jb/snappy", "/jb/usr/bin/snappy", NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/bash", "-c", "> /.cydia_no_stash", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/tar.tar", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/lzma.tar", NULL, NULL, NULL) == 0);
@@ -929,6 +951,10 @@ void exploit() {
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/lzma", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/binpack64-256.tar.lzma", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/Filza.tar.lzma", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/uicache.tar", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/snappy.tar", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/uicache", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/snappy", NULL, NULL, NULL) == 0);
     
     NSMutableDictionary *md = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.apple.springboard.plist"];
     _assert(md != nil);

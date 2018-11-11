@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		213B2FE32195FCBA008598A8 /* unlocknvram.c in Sources */ = {isa = PBXBuildFile; fileRef = 213B2FE22195FCB9008598A8 /* unlocknvram.c */; };
 		218A03132196CF9B002376BC /* removeMe.sh in Resources */ = {isa = PBXBuildFile; fileRef = 218A03122196CF9B002376BC /* removeMe.sh */; };
+		21A05FC721988DB0001D973E /* uicache.tar in Resources */ = {isa = PBXBuildFile; fileRef = 21A05FC521988DAF001D973E /* uicache.tar */; };
+		21A05FC821988DB0001D973E /* snappy.tar in Resources */ = {isa = PBXBuildFile; fileRef = 21A05FC621988DB0001D973E /* snappy.tar */; };
 		21C0FC732187A0FC00204F8D /* multi_path_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC6F2187A0FB00204F8D /* multi_path_sploit.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
 		21C0FC742187A0FC00204F8D /* empty_list_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC702187A0FB00204F8D /* empty_list_sploit.c */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
 		21C0FC7B2187A12000204F8D /* early_kalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC752187A11F00204F8D /* early_kalloc.c */; };
@@ -55,6 +57,8 @@
 		213B2FE12195FCB9008598A8 /* unlocknvram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unlocknvram.h; sourceTree = "<group>"; };
 		213B2FE22195FCB9008598A8 /* unlocknvram.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unlocknvram.c; sourceTree = "<group>"; };
 		218A03122196CF9B002376BC /* removeMe.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = removeMe.sh; sourceTree = "<group>"; };
+		21A05FC521988DAF001D973E /* uicache.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = uicache.tar; sourceTree = "<group>"; };
+		21A05FC621988DB0001D973E /* snappy.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = snappy.tar; sourceTree = "<group>"; };
 		21C0FC6F2187A0FB00204F8D /* multi_path_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multi_path_sploit.c; sourceTree = "<group>"; };
 		21C0FC702187A0FB00204F8D /* empty_list_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = empty_list_sploit.c; sourceTree = "<group>"; };
 		21C0FC712187A0FC00204F8D /* empty_list_sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = empty_list_sploit.h; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			children = (
 				218A03122196CF9B002376BC /* removeMe.sh */,
 				21C0FC7E2187A20B00204F8D /* multi_path.entitlements */,
+				21A05FC621988DB0001D973E /* snappy.tar */,
+				21A05FC521988DAF001D973E /* uicache.tar */,
 				21FF3E022185F11300B1AE49 /* lzma.tar */,
 				21FF3E012185F11300B1AE49 /* tar.tar */,
 				21FF3DFC2185F02F00B1AE49 /* Filza.tar.lzma */,
@@ -298,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				218A03132196CF9B002376BC /* removeMe.sh in Resources */,
+				21A05FC821988DB0001D973E /* snappy.tar in Resources */,
 				21FF3E032185F11300B1AE49 /* tar.tar in Resources */,
 				21FF3E042185F11300B1AE49 /* lzma.tar in Resources */,
 				21FF3DAF2185AB0A00B1AE49 /* LaunchScreen.storyboard in Resources */,
@@ -305,6 +312,7 @@
 				21FF3DAC2185AB0A00B1AE49 /* Assets.xcassets in Resources */,
 				21FF3DFD2185F02F00B1AE49 /* Filza.tar.lzma in Resources */,
 				21FF3DE52185BA9A00B1AE49 /* dropbear.plist in Resources */,
+				21A05FC721988DB0001D973E /* uicache.tar in Resources */,
 				21FF3DAA2185AB0800B1AE49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
