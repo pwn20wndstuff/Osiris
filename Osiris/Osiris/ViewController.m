@@ -11,6 +11,7 @@
 #include <sys/attr.h>
 #include <sys/mount.h>
 #include <sys/utsname.h>
+#include <sys/sysctl.h>
 #import "ViewController.h"
 #include "empty_list_sploit.h"
 #include "multi_path_sploit.h"
@@ -731,6 +732,54 @@ int isJailbroken() {
     return (access("/private/var/tmp/slide.txt", F_OK) == 0);
 }
 
+// https://github.com/tihmstar/doubleH3lix/blob/4428c660832e98271f5d82f7a9c67e842b814621/doubleH3lix/jailbreak.mm#L57
+
+void suspend_all_threads() {
+    thread_act_t other_thread, current_thread;
+    unsigned int thread_count;
+    thread_act_array_t thread_list;
+    
+    current_thread = mach_thread_self();
+    int result = task_threads(mach_task_self(), &thread_list, &thread_count);
+    if (result == -1) {
+        exit(1);
+    }
+    if (!result && thread_count) {
+        for (unsigned int i = 0; i < thread_count; ++i) {
+            other_thread = thread_list[i];
+            if (other_thread != current_thread) {
+                int kr = thread_suspend(other_thread);
+                if (kr != KERN_SUCCESS) {
+                    mach_error("thread_suspend:", kr);
+                    exit(1);
+                }
+            }
+        }
+    }
+}
+
+// https://github.com/tihmstar/doubleH3lix/blob/4428c660832e98271f5d82f7a9c67e842b814621/doubleH3lix/jailbreak.mm#L82
+
+void resume_all_threads() {
+    thread_act_t other_thread, current_thread;
+    unsigned int thread_count;
+    thread_act_array_t thread_list;
+    
+    current_thread = mach_thread_self();
+    int result = task_threads(mach_task_self(), &thread_list, &thread_count);
+    if (!result && thread_count) {
+        for (unsigned int i = 0; i < thread_count; ++i) {
+            other_thread = thread_list[i];
+            if (other_thread != current_thread) {
+                int kr = thread_resume(other_thread);
+                if (kr != KERN_SUCCESS) {
+                    mach_error("thread_suspend:", kr);
+                }
+            }
+        }
+    }
+}
+
 void exploit() {
     if (isJailbroken() == 1) {
         exit(1);
@@ -740,13 +789,19 @@ void exploit() {
     int Exploit = selectExploit();
     switch (Exploit) {
         case 0:
+            suspend_all_threads();
             vfs_sploit();
+            resume_all_threads();
             break;
         case 1:
+            suspend_all_threads();
             mptcp_go();
+            resume_all_threads();
             break;
         case 2:
+            suspend_all_threads();
             async_wake_go();
+            resume_all_threads();
             break;
         default:
             break;
@@ -967,6 +1022,10 @@ void exploit() {
         _assert(md != nil);
     }
     _assert([md[@"SBShowNonDefaultSystemApps"] isEqual:@(YES)]);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
@@ -975,6 +1034,7 @@ void exploit() {
         _assert(mkdir("/etc/dropbear", 0755) == 0);
     }
     _assert(execCommandAndWait("/jb/bin/bash", "-c", (char *)[[NSString stringWithFormat:@"/jb/usr/bin/printf '0x%016llx\n' > /private/var/tmp/slide.txt", kernel_slide] UTF8String], NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/bash", "-c", "if [[ -e /usr/local/bin/dropbear ]]; then /jb/bin/mv -f /usr/local/bin/dropbear /jb/usr/local/bin/dropbear; fi", NULL, NULL, NULL) == 0);
     _assert(spawnAndPlatformizeAndWait("/jb/bin/launchctl", "load", "/jb/dropbear.plist", NULL, NULL, NULL) == 0);
     _assert(spawnAndPlatformize("/jb/amfidebilitate", NULL, NULL, NULL, NULL, NULL) == 0);
     sleep(2);
