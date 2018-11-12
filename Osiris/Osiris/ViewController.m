@@ -1022,14 +1022,17 @@ void exploit() {
         _assert(md != nil);
     }
     _assert([md[@"SBShowNonDefaultSystemApps"] isEqual:@(YES)]);
-    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
-    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
-    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
-    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
-    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
-    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
-    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
-    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
+    if (kCFCoreFoundationVersionNumber < 1452.23) {
+        _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
+        _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
+        _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
+        _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
+    } else {
+        _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
+        _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
+        _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
+        _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
+    }
     if (access("/etc/dropbear", F_OK)) {
         _assert(mkdir("/etc/dropbear", 0755) == 0);
     }
