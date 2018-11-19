@@ -16,6 +16,7 @@
 		21C0FC7B2187A12000204F8D /* early_kalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC752187A11F00204F8D /* early_kalloc.c */; };
 		21C0FC7C2187A12000204F8D /* find_port.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC762187A11F00204F8D /* find_port.c */; };
 		21C0FC7D2187A12000204F8D /* async_wake.c in Sources */ = {isa = PBXBuildFile; fileRef = 21C0FC782187A11F00204F8D /* async_wake.c */; };
+		21E9642621A32D99000625F7 /* ReProvision.tar.lzma in Resources */ = {isa = PBXBuildFile; fileRef = 21E9642521A32D99000625F7 /* ReProvision.tar.lzma */; };
 		21FF3DA42185AB0800B1AE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DA32185AB0800B1AE49 /* AppDelegate.m */; };
 		21FF3DA72185AB0800B1AE49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF3DA62185AB0800B1AE49 /* ViewController.m */; settings = {COMPILER_FLAGS = "-Wno-unused-variable -Wno-unused-function"; }; };
 		21FF3DAA2185AB0800B1AE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FF3DA82185AB0800B1AE49 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		21C0FC792187A12000204F8D /* early_kalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = early_kalloc.h; sourceTree = "<group>"; };
 		21C0FC7A2187A12000204F8D /* async_wake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = async_wake.h; sourceTree = "<group>"; };
 		21C0FC7E2187A20B00204F8D /* multi_path.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = multi_path.entitlements; sourceTree = "<group>"; };
+		21E9642521A32D99000625F7 /* ReProvision.tar.lzma */ = {isa = PBXFileReference; lastKnownFileType = file; path = ReProvision.tar.lzma; sourceTree = "<group>"; };
 		21FF3D9F2185AB0800B1AE49 /* Osiris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Osiris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FF3DA22185AB0800B1AE49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21FF3DA32185AB0800B1AE49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		21FF3DA12185AB0800B1AE49 /* Osiris */ = {
 			isa = PBXGroup;
 			children = (
+				21E9642521A32D99000625F7 /* ReProvision.tar.lzma */,
 				218A03122196CF9B002376BC /* removeMe.sh */,
 				21C0FC7E2187A20B00204F8D /* multi_path.entitlements */,
 				21A05FC621988DB0001D973E /* snappy.tar */,
@@ -306,6 +309,7 @@
 				218A03132196CF9B002376BC /* removeMe.sh in Resources */,
 				21A05FC821988DB0001D973E /* snappy.tar in Resources */,
 				21FF3E032185F11300B1AE49 /* tar.tar in Resources */,
+				21E9642621A32D99000625F7 /* ReProvision.tar.lzma in Resources */,
 				21FF3E042185F11300B1AE49 /* lzma.tar in Resources */,
 				21FF3DAF2185AB0A00B1AE49 /* LaunchScreen.storyboard in Resources */,
 				21FF3DF92185EE5400B1AE49 /* binpack64-256.tar.lzma in Resources */,

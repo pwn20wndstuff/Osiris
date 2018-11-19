@@ -960,6 +960,12 @@ void exploit() {
     _assert(moveFileFromAppDir("Filza.tar.lzma", "/jb/Filza.tar.lzma") == 0);
     _assert(chmod("/jb/Filza.tar.lzma", 0644) == 0);
     _assert(chown("/jb/Filza.tar.lzma", 0, 0) == 0);
+    if (!access("/jb/ReProvision.tar.lzma", F_OK)) {
+        _assert(unlink("/jb/ReProvision.tar.lzma") == 0);
+    }
+    _assert(moveFileFromAppDir("ReProvision.tar.lzma", "/jb/ReProvision.tar.lzma") == 0);
+    _assert(chmod("/jb/ReProvision.tar.lzma", 0644) == 0);
+    _assert(chown("/jb/ReProvision.tar.lzma", 0, 0) == 0);
     if (!access("/jb/uicache", F_OK)) {
         _assert(unlink("/jb/uicache") == 0);
     }
@@ -997,6 +1003,12 @@ void exploit() {
         _assert(rv == 512 || rv == 0);
         run_uicache = 1;
     }
+    if (access("/Applications/ReProvision.app", F_OK)) {
+        _assert(chdir("/") == 0);
+        rv = execCommandAndWait("/jb/tar", "--use-compress-program=/jb/lzma", "-xvpkf", "/jb/ReProvision.tar.lzma", NULL, NULL);
+        _assert(rv == 512 || rv == 0);
+        run_uicache = 1;
+    }
     _assert(execCommandAndWait("/jb/bin/cp", "-a", "/jb/uicache", "/jb/usr/bin/uicache", NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/cp", "-a", "/jb/snappy", "/jb/usr/bin/snappy", NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/bash", "-c", "> /.cydia_no_stash", NULL, NULL, NULL) == 0);
@@ -1006,6 +1018,7 @@ void exploit() {
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/lzma", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/binpack64-256.tar.lzma", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/Filza.tar.lzma", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/ReProvision.tar.lzma", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/uicache.tar", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/snappy.tar", NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/jb/uicache", NULL, NULL, NULL) == 0);
@@ -1022,23 +1035,23 @@ void exploit() {
         _assert(md != nil);
     }
     _assert([md[@"SBShowNonDefaultSystemApps"] isEqual:@(YES)]);
-    if (kCFCoreFoundationVersionNumber < 1452.23) {
-        _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
-        _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
-        _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
-        _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
-    } else {
-        _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
-        _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
-        _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
-        _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
-    }
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/ln", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/ln", "-s", "/dev/null", "/var/MobileAsset/Assets/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdate", NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/rm", "-rf", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/ls", "-s", "/dev/null", "/var/MobileAsset/AssetsV2/com_apple_MobileAsset_SoftwareUpdateDocumentation", NULL, NULL) == 0);
     if (access("/etc/dropbear", F_OK)) {
         _assert(mkdir("/etc/dropbear", 0755) == 0);
     }
     _assert(execCommandAndWait("/jb/bin/bash", "-c", (char *)[[NSString stringWithFormat:@"/jb/usr/bin/printf '0x%016llx\n' > /private/var/tmp/slide.txt", kernel_slide] UTF8String], NULL, NULL, NULL) == 0);
     _assert(execCommandAndWait("/jb/bin/bash", "-c", "if [[ -e /usr/local/bin/dropbear ]]; then /jb/bin/mv -f /usr/local/bin/dropbear /jb/usr/local/bin/dropbear; fi", NULL, NULL, NULL) == 0);
     _assert(spawnAndPlatformizeAndWait("/jb/bin/launchctl", "load", "/jb/dropbear.plist", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/bin/chmod", "0755", "/Library/LaunchDaemons/com.matchstic.reprovisiond.plist", NULL, NULL, NULL) == 0);
+    _assert(execCommandAndWait("/jb/usr/sbin/chown", "root:wheel", "/Library/LaunchDaemons/com.matchstic.reprovisiond.plist", NULL, NULL, NULL) == 0);
+    _assert(spawnAndPlatformize("/jb/bin/launchctl", "load", "/Library/LaunchDaemons/com.matchstic.reprovisiond.plist", NULL, NULL, NULL) == 0);
     _assert(spawnAndPlatformize("/jb/amfidebilitate", NULL, NULL, NULL, NULL, NULL) == 0);
     sleep(2);
     if (run_uicache) {
