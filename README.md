@@ -1,5 +1,5 @@
 # Osiris Jailbreak
-Osiris is a developer jailbreak for iOS 11.0 - 11.4b3. This jailbreak is recommended for security researchers, developers and power users alike. Please keep in mind that while tweak support is built in, there is no Cydia. Please use .deb files. Filza File Manager is installed by default.
+Osiris is a developer jailbreak for iOS 11.0 - 11.4b3. This jailbreak is recommended for security researchers, developers and power users alike. Please keep in mind that while tweak support is built in, there is no Cydia. Please use .deb files. Filza File Manager and ReProvision are installed by default.
 
 ### Jailbreak information
 This jailbreak comes with Jonathan Levin's 64-Bit binary pack available at <a href = "http://newosxbook.com/tools/iOSBinaries.html">newosxbook.com</a>
