@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,23 +21,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkT-LZ-0KQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bni-Bu-zZi" userLabel="Original idea by @GeoSn0w Jailbreak by @Pwn20wnd Kernel Exploits by @i41nbeer QiLin Toolkit by @Morpheus______">
-                                        <rect key="frame" x="16" y="521" width="343" height="122"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="122" id="Y6P-Aw-f5T"/>
-                                        </constraints>
-                                        <string key="text">Jailbreak by @Pwn20wnd
-PatchFinder64 by @xerub
-HSP#4 and NVRAM by @stek29
-Original idea by @GeoSn0w
-Kernel Exploits by @i41nbeer
-QiLin Toolkit by @Morpheus______</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9p-GN-EWy">
-                                        <rect key="frame" x="16" y="304" width="343" height="59"/>
+                                        <rect key="frame" x="149" y="304" width="77" height="59"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                         <state key="normal" title="Do it"/>
                                         <connections>
@@ -45,7 +31,7 @@ QiLin Toolkit by @Morpheus______</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsh-X4-KhH">
-                                        <rect key="frame" x="16" y="51" width="343" height="41"/>
+                                        <rect key="frame" x="88" y="50" width="199" height="41"/>
                                         <string key="text">Osiris Developer Jailbreak
 for iOS 11.0 - 11.4b3</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -53,13 +39,13 @@ for iOS 11.0 - 11.4b3</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kernel Exploit: VFS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrs-Lj-S48">
-                                        <rect key="frame" x="16" y="100" width="343" height="20.5"/>
+                                        <rect key="frame" x="115.5" y="101" width="144.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPB-bm-VnX">
-                                        <rect key="frame" x="49" y="128" width="276.5" height="33"/>
+                                        <rect key="frame" x="49.5" y="131.5" width="276.5" height="33"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boot Nonce: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybs-GZ-d0G">
                                                 <rect key="frame" x="0.0" y="0.0" width="99.5" height="33"/>
@@ -79,32 +65,92 @@ for iOS 11.0 - 11.4b3</string>
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yh1-fm-S4S">
+                                        <rect key="frame" x="59" y="629" width="257" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="QiLin Toolkit by @Morpheus______"/>
+                                        <connections>
+                                            <action selector="tappedOnMorpheus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cT1-k5-Bwg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frJ-qs-VhJ">
+                                        <rect key="frame" x="76.5" y="606" width="222" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Kernel Exploits by @i41nbeer"/>
+                                        <connections>
+                                            <action selector="tappedOnIanBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kwk-cK-TXh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70n-1e-Me0">
+                                        <rect key="frame" x="81" y="583" width="213" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Original idea by @GeoSn0w"/>
+                                        <connections>
+                                            <action selector="tappedOnGeoSn0w:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qx5-ht-hqc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-8w-UX6">
+                                        <rect key="frame" x="64.5" y="560" width="246" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="lsj-7G-R9Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal">
+                                            <string key="title">HSP#4 and NVRAM by @stek29
+</string>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedOnStek:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kkp-w0-5Pj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5r-aW-DqV">
+                                        <rect key="frame" x="88" y="537" width="199" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="PatchFinder64 by @xerub"/>
+                                        <connections>
+                                            <action selector="tappedOnXerub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CRe-Qz-ogd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJR-gg-Lvd">
+                                        <rect key="frame" x="89.5" y="514" width="196" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Jailbreak by @pwn20wnd"/>
+                                        <connections>
+                                            <action selector="tappedOnPwn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pwY-PP-Kb1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="I9p-GN-EWy" firstAttribute="centerY" secondItem="zkT-LZ-0KQ" secondAttribute="centerY" id="0ig-4g-f0T"/>
-                                    <constraint firstItem="Lrs-Lj-S48" firstAttribute="leading" secondItem="Zsh-X4-KhH" secondAttribute="leading" id="7uI-ug-koh"/>
-                                    <constraint firstItem="I9p-GN-EWy" firstAttribute="trailing" secondItem="Bni-Bu-zZi" secondAttribute="trailing" id="Q3t-72-Fe6"/>
-                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="leading" secondItem="zkT-LZ-0KQ" secondAttribute="leading" constant="16" id="Qrs-1G-uxj"/>
-                                    <constraint firstItem="Lrs-Lj-S48" firstAttribute="top" secondItem="Zsh-X4-KhH" secondAttribute="bottom" constant="8" symbolic="YES" id="SSI-Ei-96O"/>
-                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="top" secondItem="zkT-LZ-0KQ" secondAttribute="top" constant="51" id="aHQ-fh-BAf"/>
-                                    <constraint firstItem="yPB-bm-VnX" firstAttribute="top" secondItem="Lrs-Lj-S48" secondAttribute="bottom" constant="7" id="d2I-gA-g7U"/>
-                                    <constraint firstItem="Lrs-Lj-S48" firstAttribute="trailing" secondItem="Zsh-X4-KhH" secondAttribute="trailing" id="jA4-EL-Bjg"/>
-                                    <constraint firstItem="yPB-bm-VnX" firstAttribute="centerX" secondItem="Lrs-Lj-S48" secondAttribute="centerX" id="l81-QJ-ztZ"/>
-                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="mAW-K2-vJd"/>
-                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="trailing" secondItem="I9p-GN-EWy" secondAttribute="trailing" id="mth-CY-cea"/>
-                                    <constraint firstItem="I9p-GN-EWy" firstAttribute="leading" secondItem="Bni-Bu-zZi" secondAttribute="leading" id="oyE-sG-wTm"/>
-                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="leading" secondItem="I9p-GN-EWy" secondAttribute="leading" id="xVH-Ck-lNj"/>
-                                    <constraint firstAttribute="bottom" secondItem="Bni-Bu-zZi" secondAttribute="bottom" constant="24" id="yVD-wA-h3T"/>
+                                    <constraint firstItem="I9p-GN-EWy" firstAttribute="centerY" secondItem="zkT-LZ-0KQ" secondAttribute="centerY" id="1MX-Vg-QIi"/>
+                                    <constraint firstAttribute="bottom" secondItem="yh1-fm-S4S" secondAttribute="bottom" constant="5" id="2sK-xR-fZt"/>
+                                    <constraint firstItem="VJR-gg-Lvd" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="4c4-cC-83W"/>
+                                    <constraint firstItem="T5r-aW-DqV" firstAttribute="top" secondItem="VJR-gg-Lvd" secondAttribute="bottom" constant="-10" id="BVz-ue-3Cu"/>
+                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="Efa-qP-ZB9"/>
+                                    <constraint firstItem="frJ-qs-VhJ" firstAttribute="top" secondItem="70n-1e-Me0" secondAttribute="bottom" constant="-10" id="FC5-js-GVt"/>
+                                    <constraint firstItem="Lrs-Lj-S48" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="GtH-8k-wG0"/>
+                                    <constraint firstItem="T5r-aW-DqV" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="GuG-w7-MPS"/>
+                                    <constraint firstItem="yPB-bm-VnX" firstAttribute="top" secondItem="Lrs-Lj-S48" secondAttribute="bottom" constant="10" id="IPK-pd-Nwz"/>
+                                    <constraint firstItem="hAB-8w-UX6" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="KZN-l4-KXR"/>
+                                    <constraint firstItem="Lrs-Lj-S48" firstAttribute="top" secondItem="Zsh-X4-KhH" secondAttribute="bottom" constant="10" id="UQg-2l-Nwf"/>
+                                    <constraint firstItem="yh1-fm-S4S" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="XgT-2G-h5D"/>
+                                    <constraint firstItem="hAB-8w-UX6" firstAttribute="top" secondItem="T5r-aW-DqV" secondAttribute="bottom" constant="-10" id="YK7-Vw-PzB"/>
+                                    <constraint firstItem="70n-1e-Me0" firstAttribute="top" secondItem="hAB-8w-UX6" secondAttribute="bottom" constant="-10" id="axk-UO-Fu8"/>
+                                    <constraint firstItem="Zsh-X4-KhH" firstAttribute="top" secondItem="zkT-LZ-0KQ" secondAttribute="top" constant="50" id="bpH-Q2-Bwr"/>
+                                    <constraint firstItem="frJ-qs-VhJ" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="lti-QR-RbL"/>
+                                    <constraint firstItem="yh1-fm-S4S" firstAttribute="top" secondItem="frJ-qs-VhJ" secondAttribute="bottom" constant="-10" id="m2R-Ux-NTx"/>
+                                    <constraint firstItem="70n-1e-Me0" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="q1M-5h-sfy"/>
+                                    <constraint firstItem="yPB-bm-VnX" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="xhf-k3-pal"/>
+                                    <constraint firstItem="I9p-GN-EWy" firstAttribute="centerX" secondItem="zkT-LZ-0KQ" secondAttribute="centerX" id="xkG-so-3hm"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="918-JZ-pA7"/>
-                            <constraint firstAttribute="trailing" secondItem="zkT-LZ-0KQ" secondAttribute="trailing" id="AOs-bR-KWX"/>
-                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e2U-bO-3SH"/>
-                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vJ5-MK-PH6"/>
+                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="18D-UZ-475"/>
+                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9JG-iE-le8"/>
+                            <constraint firstAttribute="trailing" secondItem="zkT-LZ-0KQ" secondAttribute="trailing" id="Xyg-zY-qPn"/>
+                            <constraint firstItem="zkT-LZ-0KQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ziV-uo-3Jg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -137,21 +183,6 @@ for iOS 11.0 - 11.4b3</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-js-ea6">
-                                        <rect key="frame" x="16" y="521" width="343" height="122"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="122" id="lgj-vt-Z6r"/>
-                                        </constraints>
-                                        <string key="text">Jailbreak by @Pwn20wnd
-PatchFinder64 by @xerub
-HSP#4 and NVRAM by @stek29
-Original idea by @GeoSn0w
-Kernel Exploits by @i41nbeer
-QiLin Toolkit by @Morpheus______</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzl-mt-WK2">
                                         <rect key="frame" x="16" y="232" width="343" height="203"/>
                                         <string key="text">The jailbreak has worked
@@ -173,21 +204,84 @@ You can exit the app now</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISA-QW-Pva">
+                                        <rect key="frame" x="59" y="626" width="257" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="QiLin Toolkit by @Morpheus______"/>
+                                        <connections>
+                                            <action selector="tappedOnMorpheus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O8a-jI-yZE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvR-OC-rkO">
+                                        <rect key="frame" x="76.5" y="603" width="222" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Kernel Exploits by @i41nbeer"/>
+                                        <connections>
+                                            <action selector="tappedOnIanBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1V-IQ-Qz9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbs-jl-YDe">
+                                        <rect key="frame" x="81" y="580" width="213" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Original idea by @GeoSn0w"/>
+                                        <connections>
+                                            <action selector="tappedOnGeoSn0w:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZP-3x-l2J"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-Rv-Kbw">
+                                        <rect key="frame" x="64.5" y="557" width="246" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="B2c-Cw-i1E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal">
+                                            <string key="title">HSP#4 and NVRAM by @stek29
+</string>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedOnStek:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pfw-08-DXC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jP-bI-p3C">
+                                        <rect key="frame" x="88" y="534" width="199" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="PatchFinder64 by @xerub"/>
+                                        <connections>
+                                            <action selector="tappedOnXerub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Irg-v1-0kk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAY-BK-09j">
+                                        <rect key="frame" x="89.5" y="511" width="196" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Jailbreak by @pwn20wnd"/>
+                                        <connections>
+                                            <action selector="tappedOnPwn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PhQ-vH-ofx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="heZ-Pu-xl4" firstAttribute="trailing" secondItem="Rzl-mt-WK2" secondAttribute="trailing" id="1Vv-61-Git"/>
+                                    <constraint firstItem="1jP-bI-p3C" firstAttribute="centerX" secondItem="wbs-jl-YDe" secondAttribute="centerX" id="2he-wt-TZi"/>
+                                    <constraint firstItem="1jP-bI-p3C" firstAttribute="centerX" secondItem="ISA-QW-Pva" secondAttribute="centerX" id="4NR-Oh-AJL"/>
+                                    <constraint firstItem="1jP-bI-p3C" firstAttribute="top" secondItem="TAY-BK-09j" secondAttribute="bottom" constant="-10" id="7qx-Ev-Qol"/>
                                     <constraint firstItem="heZ-Pu-xl4" firstAttribute="top" secondItem="JRx-mt-dHC" secondAttribute="top" constant="51" id="Fy7-Qy-FMw"/>
-                                    <constraint firstItem="Rzl-mt-WK2" firstAttribute="leading" secondItem="1GC-js-ea6" secondAttribute="leading" id="KRK-oQ-NHJ"/>
                                     <constraint firstItem="oqg-C3-T2g" firstAttribute="trailing" secondItem="heZ-Pu-xl4" secondAttribute="trailing" id="Lop-Bk-eRq"/>
-                                    <constraint firstAttribute="bottom" secondItem="1GC-js-ea6" secondAttribute="bottom" constant="24" id="PP9-bU-iLU"/>
+                                    <constraint firstItem="1jP-bI-p3C" firstAttribute="centerX" secondItem="Rzl-mt-WK2" secondAttribute="centerX" id="OzU-EB-7XI"/>
                                     <constraint firstItem="heZ-Pu-xl4" firstAttribute="leading" secondItem="JRx-mt-dHC" secondAttribute="leading" constant="16" id="QXl-XP-Bj2"/>
                                     <constraint firstItem="heZ-Pu-xl4" firstAttribute="leading" secondItem="Rzl-mt-WK2" secondAttribute="leading" id="UTY-MD-0XG"/>
                                     <constraint firstItem="Rzl-mt-WK2" firstAttribute="centerY" secondItem="JRx-mt-dHC" secondAttribute="centerY" id="XOM-la-E6K"/>
                                     <constraint firstItem="heZ-Pu-xl4" firstAttribute="centerX" secondItem="JRx-mt-dHC" secondAttribute="centerX" id="c0b-sW-8xZ"/>
+                                    <constraint firstItem="ISA-QW-Pva" firstAttribute="top" secondItem="HvR-OC-rkO" secondAttribute="bottom" constant="-10" id="geK-ax-OE6"/>
                                     <constraint firstItem="oqg-C3-T2g" firstAttribute="top" secondItem="heZ-Pu-xl4" secondAttribute="bottom" constant="8" symbolic="YES" id="h9j-ie-kjZ"/>
                                     <constraint firstItem="oqg-C3-T2g" firstAttribute="leading" secondItem="heZ-Pu-xl4" secondAttribute="leading" id="lak-Sy-JRv"/>
-                                    <constraint firstItem="Rzl-mt-WK2" firstAttribute="trailing" secondItem="1GC-js-ea6" secondAttribute="trailing" id="oxG-hD-fiE"/>
+                                    <constraint firstItem="1jP-bI-p3C" firstAttribute="centerX" secondItem="TAY-BK-09j" secondAttribute="centerX" id="ly4-10-fBZ"/>
+                                    <constraint firstItem="1jP-bI-p3C" firstAttribute="centerX" secondItem="PTQ-Rv-Kbw" secondAttribute="centerX" id="mdD-cz-Tjv"/>
+                                    <constraint firstItem="wbs-jl-YDe" firstAttribute="top" secondItem="PTQ-Rv-Kbw" secondAttribute="bottom" constant="-10" id="ply-V6-Qhs"/>
+                                    <constraint firstItem="PTQ-Rv-Kbw" firstAttribute="top" secondItem="1jP-bI-p3C" secondAttribute="bottom" constant="-10" id="t2d-cs-2Tc"/>
+                                    <constraint firstItem="1jP-bI-p3C" firstAttribute="centerX" secondItem="HvR-OC-rkO" secondAttribute="centerX" id="tEs-hJ-NAK"/>
+                                    <constraint firstItem="1jP-bI-p3C" firstAttribute="top" secondItem="Rzl-mt-WK2" secondAttribute="bottom" constant="99" id="yFf-g6-8Ni"/>
+                                    <constraint firstItem="HvR-OC-rkO" firstAttribute="top" secondItem="wbs-jl-YDe" secondAttribute="bottom" constant="-10" id="zIU-W2-zJ9"/>
                                 </constraints>
                             </view>
                         </subviews>

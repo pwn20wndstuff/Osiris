@@ -1118,4 +1118,42 @@ void exploit() {
 }
 
 
+-(NSURL *)getURLForUserName:(NSString *)userName {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetbot://"]]) {
+        return [NSURL URLWithString:[NSString stringWithFormat:@"tweetbot:///user_profile/%@", userName]];
+    } else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitterrific://"]]) {
+        return [NSURL URLWithString:[NSString stringWithFormat:@"twitterrific:///profile?screen_name=%@", userName]];
+    } else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetings://"]]) {
+        return [NSURL URLWithString:[NSString stringWithFormat:@"tweetings:///user?screen_name=%@", userName]];
+    } else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter://"]]) {
+        return [NSURL URLWithString:[NSString stringWithFormat:@"https://mobile.twitter.com/%@", userName]];
+    } else {
+        return [NSURL URLWithString:[NSString stringWithFormat:@"https://mobile.twitter.com/%@", userName]];
+    }
+}
+
+- (IBAction)tappedOnPwn:(id)sender{
+    [[UIApplication sharedApplication] openURL:[self getURLForUserName:@"Pwn20wnd"] options:@{} completionHandler:nil];
+}
+
+-(IBAction)tappedOnXerub:(id)sender{
+    [[UIApplication sharedApplication] openURL:[self getURLForUserName:@"xerub"] options:@{} completionHandler:nil];
+}
+
+-(IBAction)tappedOnStek:(id)sender{
+    [[UIApplication sharedApplication] openURL:[self getURLForUserName:@"stek29"] options:@{} completionHandler:nil];
+}
+
+-(IBAction)tappedOnGeoSn0w:(id)sender{
+    [[UIApplication sharedApplication] openURL:[self getURLForUserName:@"FCE365"] options:@{} completionHandler:nil];
+}
+
+-(IBAction)tappedOnIanBeer:(id)sender{
+    [[UIApplication sharedApplication] openURL:[self getURLForUserName:@"i41nbeer"] options:@{} completionHandler:nil];
+}
+
+-(IBAction)tappedOnMorpheus:(id)sender{
+    [[UIApplication sharedApplication] openURL:[self getURLForUserName:@"morpheus______"] options:@{} completionHandler:nil];
+}
+
 @end
